@@ -97,9 +97,14 @@ const refreshToken = async (token: string) => {
     accessToken,
   };
 };
+const getAllUsers = async () => {
+  const result = await User.find();
+  return result;
+};
 
 export const AuthServices = {
   createAUserIntoDB,
   loginAUser,
   refreshToken,
+  getAllUsers,
 };
