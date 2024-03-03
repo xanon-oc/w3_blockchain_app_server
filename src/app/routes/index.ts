@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { AuthRoutes } from '../modules/auth/auth.routes';
 import { BlockchainRouter } from '../modules/blockchain/blockchain.routes';
+import { BalanceRequestRouter } from '../modules/request_balance/request_balance.routes';
 
 const router = Router();
 
@@ -12,6 +13,10 @@ const moduleRoutes = [
   {
     path: '/blockchain',
     route: BlockchainRouter,
+  },
+  {
+    path: '/balance_request',
+    route: BalanceRequestRouter,
   },
 ];
 
