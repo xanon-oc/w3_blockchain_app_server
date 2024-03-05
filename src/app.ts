@@ -6,7 +6,7 @@ import handleGlobalError from './app/middlewares/globalErrorHandler';
 import cookieParser from 'cookie-parser';
 const app: Application = express();
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['https://w3-blockchain-client.vercel.app'];
 
 //parser
 
