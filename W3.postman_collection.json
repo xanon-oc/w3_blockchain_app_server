@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "1d3216f7-3c36-4651-b7a2-fe3988f15f5b",
+		"name": "W3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27382611"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"man.doe@example.com\",\r\n    \"password\": \"securePwd\",\r\n    \"isBlocked\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"niloyroy184@gmail.com\",\r\n    \"password\": \"niloy54321\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDc1MTExLCJleHAiOjE3MTAzMzkxMTF9.rYOfcOk6HHsB_C4ANbFp1OJ2oQuTr5Vm-ecvtAg9BX8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\": \"securePwd\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/auth/get_all_users",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"get_all_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH TOKEN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "refreshToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDk0NzAyODEsImV4cCI6MTcxMDMzNDI4MX0.8XHOrqTDNtvsPERZ46Z0TIR7AZB2vFU9FM0EziaRE9Y",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/auth/refresh-token",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BLOCKCHAIN",
+			"item": [
+				{
+					"name": "CREATE BLOCKCHAIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDgyMDE3LCJleHAiOjE3MTAzNDYwMTd9.XaQ1tQ4TcpTq2Fz4_oO_rsAxIipkHzLZ1Ei-p4z1l6o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Polygon\",\r\n    \"photo\":\"https://ibb.co/3zCC7cJ\",\r\n    \"network\":\"TestNet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/blockchain/create_blockchain",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blockchain",
+								"create_blockchain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BLOCKCHAIN",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDc2NzY0LCJleHAiOjE3MTAzNDA3NjR9.Vb9GGRn4BABJDKWOb7IDulqXpms6fZF7EDlWXAXYXnQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/blockchain/delete_blockchain/65e48ba3705dd57316231fcd",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blockchain",
+								"delete_blockchain",
+								"65e48ba3705dd57316231fcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL BLOCKCHAIN",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDc2NzY0LCJleHAiOjE3MTAzNDA3NjR9.Vb9GGRn4BABJDKWOb7IDulqXpms6fZF7EDlWXAXYXnQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/blockchain/get_all_blockchain",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blockchain",
+								"get_all_blockchain"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BALANCE REQUEST",
+			"item": [
+				{
+					"name": "ADD BALANCE REQUEST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDgwNzEzLCJleHAiOjE3MTAzNDQ3MTN9.AwWAYetdVxjrtVW8f1C6DZEKMWTe57P2MMzv9fhDfgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\": \"example@example.com\",\r\n    \"blockchain_id\": \"65e4a45dd70fdf9d749c0a12\",\r\n    \"wallet_address\": \"1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa\",\r\n    \"requested_balance\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/balance_request/create_request_balance",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"balance_request",
+								"create_request_balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE BALANCE REQUEST STATUS",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDgwNzEzLCJleHAiOjE3MTAzNDQ3MTN9.AwWAYetdVxjrtVW8f1C6DZEKMWTe57P2MMzv9fhDfgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/balance_request/update_balance_request_status/65e4a2da0d41c2aedd80f1c8",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"balance_request",
+								"update_balance_request_status",
+								"65e4a2da0d41c2aedd80f1c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BALANCE REQUEST BY USER",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDgwNzEzLCJleHAiOjE3MTAzNDQ3MTN9.AwWAYetdVxjrtVW8f1C6DZEKMWTe57P2MMzv9fhDfgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/balance_request/get_all_balance_request_by_user/niloy@gmail.com",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"balance_request",
+								"get_all_balance_request_by_user",
+								"niloy@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL BALANCE REQUEST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbG95cm95MTg0QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNzA5NDgwNzEzLCJleHAiOjE3MTAzNDQ3MTN9.AwWAYetdVxjrtVW8f1C6DZEKMWTe57P2MMzv9fhDfgQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://w3-blockchain-app-server.vercel.app/api/balance_request/get_all_balance_request",
+							"protocol": "https",
+							"host": [
+								"w3-blockchain-app-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"balance_request",
+								"get_all_balance_request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
