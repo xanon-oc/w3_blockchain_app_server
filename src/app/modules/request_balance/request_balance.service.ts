@@ -58,7 +58,9 @@ const getAllRequestByUserBalanceIntoDB = async (email: string) => {
     throw new AppError(httpStatus.NOT_FOUND, 'User dose not exists');
   }
 
-  const result = await BalanceRequest.find({ user_email: email });
+  const result = await BalanceRequest.find({ user_email: email }).populate(
+    'blockchain_id',
+  );
   return result;
 };
 

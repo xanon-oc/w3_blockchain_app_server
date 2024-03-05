@@ -5,6 +5,7 @@ const BlockchainValidationSchema = new Schema<TBlockchain, BlockchainModal>(
   {
     name: { type: String, required: true, unique: true },
     photo: { type: String, required: true },
+    network: { type: String, enum: ['TestNet', 'ETH'], required: true },
   },
   { timestamps: true, versionKey: false },
 );

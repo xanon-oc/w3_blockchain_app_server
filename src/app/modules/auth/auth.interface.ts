@@ -8,7 +8,7 @@ export type TLoginUser = {
 
 export type TUser = {
   name: string;
-  gender: 'male' | 'female';
+  gender: 'male' | 'female' | 'other';
   email: string;
   password: string;
   role: 'user' | 'superAdmin';

@@ -9,7 +9,7 @@ const AuthLoginSchemaValidation = z.object({
 const AuthRegisterSchemaValidation = z.object({
   body: z.object({
     name: z.string(),
-    gender: z.enum(['male', 'female']),
+    gender: z.enum(['male', 'female', 'other']),
     email: z.string().email(),
     password: z.string(),
   }),

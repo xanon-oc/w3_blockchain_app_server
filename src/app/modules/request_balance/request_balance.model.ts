@@ -19,7 +19,7 @@ const RequestBalanceSchema = new Schema<TRequestBalance, RequestBalanceModal>(
     request_status: {
       type: String,
       required: true,
-      enum: ['approved', 'declined', 'pending'],
+      enum: ['approved', 'pending'],
       default: 'pending',
     },
   },

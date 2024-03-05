@@ -8,7 +8,7 @@ export type TRequestBalance = {
   wallet_address: string;
   request_type: '20 Test Link';
   requested_balance: number;
-  request_status: 'approved' | 'declined' | 'pending';
+  request_status: 'approved' | 'pending';
 };
 
 export interface RequestBalanceModal extends Model<TRequestBalance> {

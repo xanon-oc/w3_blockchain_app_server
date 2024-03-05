@@ -6,6 +6,7 @@ import { Model } from 'mongoose';
 export type TBlockchain = {
   name: string;
   photo: string;
+  network: 'TestNet' | 'ETH';
 };
 
 export interface BlockchainModal extends Model<TBlockchain> {

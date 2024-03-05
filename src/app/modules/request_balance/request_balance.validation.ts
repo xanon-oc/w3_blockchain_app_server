@@ -10,7 +10,7 @@ const requestBalancePostValidationSchema = z.object({
 });
 const requestBalanceUpdateValidationSchema = z.object({
   body: z.object({
-    request_status: z.enum(['approved', 'declined', 'pending']),
+    request_status: z.enum(['approved', 'pending']),
   }),
 });
 
